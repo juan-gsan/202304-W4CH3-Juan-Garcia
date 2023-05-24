@@ -2,9 +2,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { ApiRepository } from "../services/api.repository";
 import { AllCharacters } from "../types/allCharacters";
 import { consoleError } from "../services/errors";
-import { Card } from "./Card";
 
-export function List() {
+export function useCharacters() {
   const [characters, setCharacters] = useState<AllCharacters[]>([]);
   const characterUrl = "http://localhost:3000/characters/";
 
@@ -35,11 +34,8 @@ export function List() {
     }
   };
 
-  return (
-    <ul className="characters-list row list-unstyled">
-      {characters.map((item) => (
-        <Card item={item} key={item.id} handleUpdate={handleUpdate}></Card>
-      ))}
-    </ul>
-  );
+  return {
+    characters,
+    handleUpdate,
+  };
 }
