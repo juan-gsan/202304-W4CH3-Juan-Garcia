@@ -21,12 +21,12 @@ export function useCharacters() {
     handleLoad();
   }, [handleLoad]);
 
-  const handleUpdate = async (character: AllCharacters) => {
+  const handleKill = async (character: AllCharacters) => {
     try {
-      const updateCharacter = await repo.update(character.id, character);
+      const killCharacter = await repo.update(character.id, character);
       setCharacters(
         characters.map((item) =>
-          item.id === character.id ? updateCharacter : item
+          item.id === character.id ? killCharacter : item
         )
       );
     } catch (error) {
@@ -36,6 +36,6 @@ export function useCharacters() {
 
   return {
     characters,
-    handleUpdate,
+    handleKill,
   };
 }

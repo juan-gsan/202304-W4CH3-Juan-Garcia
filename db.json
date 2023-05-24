@@ -9,7 +9,8 @@
       "emoji": "👑",
       "alive": true,
       "communicate": "You're all gonna die",
-      "rulingYears": 5
+      "rulingYears": 5,
+      "picture": "./joffrey.jpg"
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
       "alive": true,
       "communicate": "First hit, then ask",
       "weapon": "sword",
-      "skills": 7
+      "skills": 7,
+      "picture": "./jaime.jpg"
     },
     {
       "id": 3,
@@ -33,7 +35,8 @@
       "alive": true,
       "communicate": "First hit, then ask",
       "weapon": "sword",
-      "skills": 9
+      "skills": 9,
+      "picture": "./daenerys.jpg"
     },
     {
       "id": 4,
@@ -55,10 +58,11 @@
         "communicate": "First hit, then ask",
         "weapon": "sword",
         "skills": 9
-      }
+      },
+      "picture": "./tyryon.jpg"
     },
     {
-      "id": 4,
+      "id": 5,
       "tvShow": "Game of Thrones",
       "name": "Bronn",
       "family": "Lannister",
@@ -78,7 +82,8 @@
         "weapon": "sword",
         "skills": 7
       },
-      "pelotismo": 7
+      "pelotismo": 7,
+      "picture": "./bronn.jpg"
     }
   ]
 }

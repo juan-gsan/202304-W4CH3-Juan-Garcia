@@ -1,4 +1,4 @@
-export type Character = {
+export interface Character {
   id: number;
   tvShow: string;
   name: string;
@@ -7,22 +7,23 @@ export type Character = {
   emoji: string;
   alive: boolean;
   communicate: string;
-};
+  picture: string;
+}
 
-export type King = Character & {
+export interface King extends Character {
   rulingYears: number;
-};
+}
 
-export type Knight = Character & {
+export interface Knight extends Character {
   weapon: string;
   skills: number;
-};
+}
 
-export type Counselor = Character & {
+export interface Counselor extends Character {
   characterAdvised: King | Knight;
-};
+}
 
-export type Squire = Character & {
+export interface Squire extends Character {
   knight: Knight;
   pelotismo: number;
-};
+}
