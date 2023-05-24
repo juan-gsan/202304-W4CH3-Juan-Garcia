@@ -1,3 +1,5 @@
+import { List } from "./components/List";
+
 export function App() {
-  return <></>;
+  return <List></List>;
 }

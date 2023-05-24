@@ -1,27 +1,28 @@
-export abstract class Character {
-  static tvShow = 'Game of Thrones';
+export interface Character {
+  id: number;
+  tvShow: string;
+  name: string;
+  family: string;
+  age: number;
+  emoji: string;
+  alive: boolean;
+  communicate: string;
+}
 
-  name;
-  house;
-  age;
-  emoji;
-  alive;
-  communicate;
+export interface King extends Character {
+  rulingYears: number;
+}
 
-  constructor(name: string, house: string, age: number, emoji: string) {
-    this.name = name;
-    this.house = house;
-    this.age = age;
-    this.emoji = emoji;
-    this.alive = true;
-    this.communicate = '';
-  }
+export interface Knight extends Character {
+  weapon: string;
+  skills: number;
+}
 
-  endLife() {
-    this.alive = false;
-  }
+export interface Counselor extends Character {
+  characterAdvised: King | Knight;
+}
 
-  saySentence() {
-    return this.communicate;
-  }
+export interface Squire extends Character {
+  knight: Knight;
+  pelotismo: number;
 }

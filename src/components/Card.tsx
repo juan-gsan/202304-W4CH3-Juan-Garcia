@@ -1,54 +1,82 @@
-export function Card() {
+import { AllCharacters } from "../types/allCharacters";
+
+type PropsType = {
+  item: AllCharacters;
+  handleKill: (character: AllCharacters) => Promise<void>;
+};
+
+export function Card({ item }: PropsType) {
+  // const renderDifferentClass = (item: AllCharacters) => {
+  //   if ("rulingYears" in item) {
+  //     return <li>Años de reinado: {item.rulingYears.toLocaleString()}</li>;
+  //   }
+
+  //   if ("weapon" in item) {
+  //     return (
+  //       <>
+  //         <li>Arma: {item.weapon}</li>
+  //         <li>Destreza: {item.skills.toLocaleString()}</li>
+  //       </>
+  //     );
+  //   }
+
+  //   if ("characterAdvised" in item) {
+  //     return <li>Asesora a: {item.characterAdvised}</li>;
+  //   }
+
+  //   if ("knight" in item) {
+  //     return (
+  //       <>
+  //         <li>Sirve a: {item.knight}</li>
+  //         <li>Peloteo: {item.pelotismo.toLocaleString()}</li>
+  //       </>
+  //     );
+  //   }
+  // };
+
   return (
-    <></>
-    //  <>
-    //    {/* <li className="character col">
-    //     <div className="card character__card">
-    //       <img
-    //         src="./img/{character.name.toLowerCase()}.jpg"
-    //         alt="{
-    //   character.name
-    // } {character.house}"
-    //         className="character__picture card-img-top"
-    //       />
-    //       <div className="card-body">
-    //         <h2 className="character__name card-title h4">
-    //           {character.name} {character.house}
-    //         </h2>
-    //         <div className="character__info">
-    //           <ul className="list-unstyled">
-    //             <li>Edad: {character.age}</li>
-    //             <li>
-    //               Estado:
-    //               <i className="fas fa-thumbs-up"></i>
-    //             </li>
-    //           </ul>
-    //         </div>
-    //         <div className="character__overlay">
-    //           <ul className="list-unstyled">
-    //             {renderDifferentClass(character)}
-    //           </ul>
-    //           <div className="character__actions">
-    //             <button
-    //               data-id="${
-    //               character.name
-    //             }"
-    //               className="character__action btn speak"
-    //             >
-    //               habla
-    //             </button>
-    //             <button
-    //               data-id={character.name}
-    //               className="character__action btn die"
-    //             >
-    //               muere
-    //             </button>
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <i className={character.emoji}></i>
-    //     </div>
-    //   </li>
-    // </> */
+    <>
+      <li className="character col">
+        <div className="card character__card">
+          <img
+            src={`img/${item.name.toLowerCase()}.jpg`}
+            alt={item.name}
+            className="character__picture card-img-top"
+          />
+          <div className="card-body">
+            <h2 className="character__name card-title h4">
+              {item.name} {item.family}
+            </h2>
+            <div className="character__info">
+              <ul className="list-unstyled">
+                <li>Edad: {item.age}</li>
+                <li>
+                  Estado:
+                  <i className="fas fa-thumbs-up"></i>
+                </li>
+              </ul>
+            </div>
+            {/* <div className="character__overlay">
+              <ul className="list-unstyled">{renderDifferentClass(item)}</ul>
+              <div className="character__actions">
+                <button
+                  data-id={item.name}
+                  className="character__action btn speak"
+                >
+                  habla
+                </button>
+                <button
+                  data-id={item.name}
+                  className="character__action btn die"
+                >
+                  muere
+                </button>
+              </div>
+            </div> */}
+          </div>
+          <i className={item.emoji}></i>
+        </div>
+      </li>
+    </>
   );
 }
