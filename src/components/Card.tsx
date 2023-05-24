@@ -2,7 +2,7 @@ export function Card() {
   return (
     <></>
     //  <>
-    //    {/* <li className="character col">
+    //    <li className="character col">
     //     <div className="card character__card">
     //       <img
     //         src="./img/{character.name.toLowerCase()}.jpg"
@@ -49,6 +49,6 @@ export function Card() {
     //       <i className={character.emoji}></i>
     //     </div>
     //   </li>
-    // </> */
+    // </>
   );
 }

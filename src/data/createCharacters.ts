@@ -1,38 +1,38 @@
-import { Counselor } from '../models/counselor.ts';
-import { Fighter } from '../models/fighter.ts';
-import { King } from '../models/king.ts';
-import { Squire } from '../models/squire.ts';
-import { AllCharacters } from '../types/allCharacters.ts';
+import { Counselor } from "../models/counselor.ts";
+import { Fighter } from "../models/fighter.ts";
+import { King } from "../models/king.ts";
+import { Squire } from "../models/squire.ts";
+import { AllCharacters } from "../models/character.ts";
 
 export const createCharacters = () => {
   const charactersList: AllCharacters[] = [];
 
-  const characterJoffrey = new King('Joffrey', 'Baratheon', 20, '👑', 5);
+  const characterJoffrey = new King("Joffrey", "Baratheon", 20, "👑", 5);
 
-  const characterJaime = new Fighter('Jaime', 'Lannister', 30, '🗡', 'sword', 7);
+  const characterJaime = new Fighter("Jaime", "Lannister", 30, "🗡", "sword", 7);
 
   const characterDaenerys = new Fighter(
-    'Daenerys',
-    'Targaryen',
+    "Daenerys",
+    "Targaryen",
     25,
-    '🗡',
-    'axe',
+    "🗡",
+    "axe",
     5
   );
 
   const characterTyrion = new Counselor(
-    'Tyrion',
-    'Lannister',
+    "Tyrion",
+    "Lannister",
     35,
-    '🎓',
+    "🎓",
     characterDaenerys
   );
 
   const characterBronn = new Squire(
-    'Bronn',
-    'Lannister',
+    "Bronn",
+    "Lannister",
     40,
-    '🛡',
+    "🛡",
     characterJaime,
     10
   );
