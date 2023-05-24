@@ -7,7 +7,6 @@ export interface Character {
   emoji: string;
   alive: boolean;
   communicate: string;
-  picture: string;
 }
 
 export interface King extends Character {

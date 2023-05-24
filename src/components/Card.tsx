@@ -6,40 +6,40 @@ type PropsType = {
 };
 
 export function Card({ item, handleKill }: PropsType) {
-  // const renderDifferentClass = (item: AllCharacters) => {
-  //   if ("rulingYears" in item) {
-  //     return <li>Años de reinado: {item.rulingYears.toLocaleString()}</li>;
-  //   }
+  const renderDifferentClass = (item: AllCharacters) => {
+    if ("rulingYears" in item) {
+      return <li>Años de reinado: {item.rulingYears.toLocaleString()}</li>;
+    }
 
-  //   if ("weapon" in item) {
-  //     return (
-  //       <>
-  //         <li>Arma: {item.weapon}</li>
-  //         <li>Destreza: {item.skills.toLocaleString()}</li>
-  //       </>
-  //     );
-  //   }
+    if ("weapon" in item) {
+      return (
+        <>
+          <li>Arma: {item.weapon}</li>
+          <li>Destreza: {item.skills.toLocaleString()}</li>
+        </>
+      );
+    }
 
-  //   if ("characterAdvised" in item) {
-  //     return <li>Asesora a: {item.characterAdvised}</li>;
-  //   }
+    if ("characterAdvised" in item) {
+      return <li>Asesora a: {item.characterAdvised}</li>;
+    }
 
-  //   if ("knight" in item) {
-  //     return (
-  //       <>
-  //         <li>Sirve a: {item.knight}</li>
-  //         <li>Peloteo: {item.pelotismo.toLocaleString()}</li>
-  //       </>
-  //     );
-  //   }
-  // };
+    if ("knight" in item) {
+      return (
+        <>
+          <li>Sirve a: {item.knight}</li>
+          <li>Peloteo: {item.pelotismo.toLocaleString()}</li>
+        </>
+      );
+    }
+  };
 
   return (
     <>
       <li className="character col">
         <div className="card character__card">
           <img
-            src={item.picture}
+            src={`img/${item.name.toLowerCase()}.jpg`}
             alt={item.name}
             className="character__picture card-img-top"
           />
@@ -56,7 +56,7 @@ export function Card({ item, handleKill }: PropsType) {
                 </li>
               </ul>
             </div>
-            {/* <div className="character__overlay">
+            <div className="character__overlay">
               <ul className="list-unstyled">{renderDifferentClass(item)}</ul>
               <div className="character__actions">
                 <button
@@ -72,7 +72,7 @@ export function Card({ item, handleKill }: PropsType) {
                   muere
                 </button>
               </div>
-            </div> */}
+            </div>
           </div>
           <i className={item.emoji}></i>
         </div>

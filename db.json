@@ -9,8 +9,7 @@
       "emoji": "👑",
       "alive": true,
       "communicate": "You're all gonna die",
-      "rulingYears": 5,
-      "picture": "./joffrey.jpg"
+      "rulingYears": 5
     },
     {
       "id": 2,
@@ -22,8 +21,7 @@
       "alive": true,
       "communicate": "First hit, then ask",
       "weapon": "sword",
-      "skills": 7,
-      "picture": "./jaime.jpg"
+      "skills": 7
     },
     {
       "id": 3,
@@ -35,8 +33,7 @@
       "alive": true,
       "communicate": "First hit, then ask",
       "weapon": "sword",
-      "skills": 9,
-      "picture": "./daenerys.jpg"
+      "skills": 9
     },
     {
       "id": 4,
@@ -47,19 +44,7 @@
       "emoji": "🎓",
       "alive": true,
       "communicate": "I think I'll be dying soon",
-      "characterAdvised": {
-        "id": 3,
-        "tvShow": "Game of Thrones",
-        "name": "Daenerys",
-        "family": "Targaryen",
-        "age": 25,
-        "emoji": "🗡",
-        "alive": true,
-        "communicate": "First hit, then ask",
-        "weapon": "sword",
-        "skills": 9
-      },
-      "picture": "./tyryon.jpg"
+      "characterAdvised": 3
     },
     {
       "id": 5,
@@ -70,20 +55,8 @@
       "emoji": "🛡",
       "alive": true,
       "communicate": "I'm a loser",
-      "knight": {
-        "id": 2,
-        "tvShow": "Game of Thrones",
-        "name": "Jaime",
-        "family": "Lannister",
-        "age": 25,
-        "emoji": "🗡",
-        "alive": true,
-        "communicate": "First hit, then ask",
-        "weapon": "sword",
-        "skills": 7
-      },
-      "pelotismo": 7,
-      "picture": "./bronn.jpg"
+      "knight": 2,
+      "pelotismo": 7
     }
   ]
 }
