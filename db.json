@@ -44,7 +44,18 @@
       "emoji": "🎓",
       "alive": true,
       "communicate": "I think I'll be dying soon",
-      "characterAdvised": 3
+      "characterAdvised": {
+        "id": 3,
+        "tvShow": "Game of Thrones",
+        "name": "Daenerys",
+        "family": "Targaryen",
+        "age": 25,
+        "emoji": "🗡",
+        "alive": true,
+        "communicate": "First hit, then ask",
+        "weapon": "sword",
+        "skills": 9
+      }
     },
     {
       "id": 5,
@@ -55,7 +66,18 @@
       "emoji": "🛡",
       "alive": true,
       "communicate": "I'm a loser",
-      "knight": 2,
+      "knight": {
+        "id": 2,
+        "tvShow": "Game of Thrones",
+        "name": "Jaime",
+        "family": "Lannister",
+        "age": 25,
+        "emoji": "🗡",
+        "alive": true,
+        "communicate": "First hit, then ask",
+        "weapon": "sword",
+        "skills": 7
+      },
       "pelotismo": 7
     }
   ]

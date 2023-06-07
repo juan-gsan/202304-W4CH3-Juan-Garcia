@@ -5,34 +5,38 @@ type PropsType = {
   handleKill: (character: AllCharacters) => Promise<void>;
 };
 
-export function Card({ item }: PropsType) {
-  // const renderDifferentClass = (item: AllCharacters) => {
-  //   if ("rulingYears" in item) {
-  //     return <li>Años de reinado: {item.rulingYears.toLocaleString()}</li>;
-  //   }
+export function Card({ item, handleKill }: PropsType) {
+  const renderDifferentClass = (item: AllCharacters) => {
+    if ("rulingYears" in item) {
+      return <li>Años de reinado: {item.rulingYears.toLocaleString()}</li>;
+    }
 
-  //   if ("weapon" in item) {
-  //     return (
-  //       <>
-  //         <li>Arma: {item.weapon}</li>
-  //         <li>Destreza: {item.skills.toLocaleString()}</li>
-  //       </>
-  //     );
-  //   }
+    if ("weapon" in item) {
+      return (
+        <>
+          <li>Arma: {item.weapon}</li>
+          <li>Destreza: {item.skills.toLocaleString()}</li>
+        </>
+      );
+    }
 
-  //   if ("characterAdvised" in item) {
-  //     return <li>Asesora a: {item.characterAdvised}</li>;
-  //   }
+    if ("characterAdvised" in item) {
+      return <li>Asesora a: {item.characterAdvised.name}</li>;
+    }
 
-  //   if ("knight" in item) {
-  //     return (
-  //       <>
-  //         <li>Sirve a: {item.knight}</li>
-  //         <li>Peloteo: {item.pelotismo.toLocaleString()}</li>
-  //       </>
-  //     );
-  //   }
-  // };
+    if ("knight" in item) {
+      return (
+        <>
+          <li>Sirve a: {item.knight.name}</li>
+          <li>Peloteo: {item.pelotismo.toLocaleString()}</li>
+        </>
+      );
+    }
+  };
+
+  function handleClick() {
+    handleKill(item);
+  }
 
   return (
     <>
@@ -56,7 +60,7 @@ export function Card({ item }: PropsType) {
                 </li>
               </ul>
             </div>
-            {/* <div className="character__overlay">
+            <div className="character__overlay">
               <ul className="list-unstyled">{renderDifferentClass(item)}</ul>
               <div className="character__actions">
                 <button
@@ -68,11 +72,12 @@ export function Card({ item }: PropsType) {
                 <button
                   data-id={item.name}
                   className="character__action btn die"
+                  onClick={handleClick}
                 >
                   muere
                 </button>
               </div>
-            </div> */}
+            </div>
           </div>
           <i className={item.emoji}></i>
         </div>

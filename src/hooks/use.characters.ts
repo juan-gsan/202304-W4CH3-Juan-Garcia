@@ -23,7 +23,10 @@ export function useCharacters() {
 
   const handleKill = async (character: AllCharacters) => {
     try {
-      const killCharacter = await repo.update(character.id, character);
+      const killCharacter = await repo.update(character.id, {
+        ...character,
+        alive: false,
+      });
       setCharacters(
         characters.map((item) =>
           item.id === character.id ? killCharacter : item
